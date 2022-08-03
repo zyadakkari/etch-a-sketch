@@ -25,11 +25,18 @@ function getNumber (numb) {
     x = input
 }
 
+
+function wipeBoard (){
+    const oldSquares = document.querySelectorAll('.column');
+    oldSquares.forEach(column => {
+        column.style.backgroundColor = null
+    })
+
+}
 function newBoard () {
     getNumber();
     createBoard();
-    cBoard.style.backgroundColor = null;
-
+    wipeBoard();
 }
 
 
